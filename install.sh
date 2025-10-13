@@ -26,7 +26,7 @@ for name in .zshrc; do
     symlink $file $target
 done
 
-for dir in .zsh; do
+for dir in .zsh .claude; do
     target="$HOME/$dir"
     if [ ! -d "$target" ]; then
         mkdir -p "$target"

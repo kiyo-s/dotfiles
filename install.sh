@@ -19,7 +19,7 @@ symlink() {
     fi
 }
 
-for name in .zshrc; do
+for name in .zshrc .terraformrc; do
     target="$HOME/$name"
     file="$(pwd)/$name"
     backup $target

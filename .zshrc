@@ -10,6 +10,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ${HOME}/.p10k.zsh ]] || source "${HOME}/.p10k.zsh"
+autoload -Uz promptinit
+promptinit
+prompt powerlevel10k
 
 if type brew &>/dev/null; then
     FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"

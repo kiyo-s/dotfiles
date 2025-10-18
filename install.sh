@@ -26,7 +26,7 @@ for name in .zshrc .terraformrc; do
     symlink $file $target
 done
 
-for dir in .zsh .claude .config/ghostty; do
+for dir in .zsh .claude .claude/commands .config/ghostty; do
     target="$HOME/$dir"
     if [ ! -d "$target" ]; then
         mkdir -p "$target"

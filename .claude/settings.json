@@ -1,0 +1,17 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(ls:*)",
+            "Bash(git log:*)",
+            "Bash(git status:*)",
+            "Read(*)"
+        ],
+        "deny": [
+            "Bash(rm:*)",
+            "Bash(git reset:*)"
+        ],
+        "additionalDirectories": [
+            "~/tasks/"
+        ]
+    }
+}

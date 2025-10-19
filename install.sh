@@ -13,7 +13,7 @@ backup() {
 symlink() {
     file=$1
     link=$2
-    if [ ! -e "$link" ]; then
+    if [ ! -h "$link" ]; then
         echo "-----> Symlinking your new $link"
         ln -s $file $link
     fi
@@ -26,7 +26,7 @@ for name in .zshrc .terraformrc; do
     symlink $file $target
 done
 
-for dir in .zsh .claude .claude/commands .config/ghostty; do
+for dir in .zsh .claude .claude/commands .config/ghostty .gemini .gemini/commands; do
     target="$HOME/$dir"
     if [ ! -d "$target" ]; then
         mkdir -p "$target"

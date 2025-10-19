@@ -4,11 +4,26 @@
             "Bash(ls:*)",
             "Bash(git log:*)",
             "Bash(git status:*)",
+            "Bash(helm list:*)",
+            "Bash(helm template:*)",
+            "Bash(kubectl get:*)",
+            "Bash(terraform init:*)",
+            "Bash(terraform fmt:*)",
+            "Bash(terraform graph:*)",
+            "Bash(terraform plan:*)",
+            "Bash(terraform show:*)",
+            "Bash(terraform validate:*)",
             "Read(*)"
         ],
         "deny": [
             "Bash(rm:*)",
-            "Bash(git reset:*)"
+            "Bash(git reset:*)",
+            "Bash(helm install:*)",
+            "Bash(helm uninstall:*)",
+            "Bash(kubectl apply:*)",
+            "Bash(kubectl delete:*)",
+            "Bash(kubectl patch:*)",
+            "Bash(terraform destroy:*)"
         ],
         "additionalDirectories": [
             "~/tasks/"

@@ -1,0 +1,37 @@
+{
+    "general": {
+        "enablePromptCompletion": true
+    },
+    "ui": {
+        "theme": "GitHub",
+        "showStatusInTitle": true,
+        "showMemoryUsage": true,
+        "showLineNumbers": true
+    },
+    "tools": {
+        "allowed": [
+            "run_shell_command(ls)",
+            "run_shell_command(git log)",
+            "run_shell_command(git status)",
+            "run_shell_command(helm list)",
+            "run_shell_command(helm template)",
+            "run_shell_command(kubectl get)",
+            "run_shell_command(terraform init)",
+            "run_shell_command(terraform fmt)",
+            "run_shell_command(terraform graph)",
+            "run_shell_command(terraform plan)",
+            "run_shell_command(terraform show)",
+            "run_shell_command(terraform validate)"
+        ]
+    },
+    "context": {
+        "fileName": [
+            "CONTEXT.md",
+            "GEMINI.md",
+            "CLAUDE.md"
+        ],
+        "includeDirectories": [
+            "~/tasks/"
+        ]
+    }
+}

@@ -33,5 +33,10 @@
         "includeDirectories": [
             "~/tasks/"
         ]
+    },
+    "security": {
+        "auth": {
+            "selectedType": "oauth-personal"
+        }
     }
 }

@@ -61,4 +61,4 @@ window-theme = "ghostty"
 background-blur-radius = 12
 background-opacity = 0.75
 
-scrollback-limit = 1048576
+scrollback-limit = 1073741824

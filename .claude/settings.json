@@ -25,8 +25,37 @@
             "Bash(kubectl patch:*)",
             "Bash(terraform destroy:*)"
         ],
+        "defaultMode": "default",
         "additionalDirectories": [
             "~/tasks/"
         ]
+    },
+    "hooks": {
+        "Notification": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "say -v Samantha 'Please verify the prompt'"
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "say -v Samantha 'Task completed successfully'"
+                    }
+                ]
+            }
+        ]
+    },
+    "language": "Japanese",
+    "autoUpdatesChannel": "latest",
+    "statusLine": {
+        "type": "command",
+        "command": "bash ~/.claude/statusline-command.sh"
     }
 }

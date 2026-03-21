@@ -16,12 +16,12 @@ alias tpi='terraform providers mirror -platform="$TF_ARCH" ${HOME}/.terraform.d/
 alias tdm='terraform-docs markdown --output-file=README.md .'
 ## Terraform without tfvars
 alias ti='terraform init -reconfigure'
-alias tp='terraform plan'
+alias tp='terraform plan -lock=false'
 alias ta='terraform apply'
 alias tc='terraform console'
 ## Terraform with tfvars
 alias tvi='terraform init -reconfigure -backend-config="${ENV}/backend.tfvars"'
-alias tvp='terraform plan -var-file="${ENV}/terraform.tfvars"'
+alias tvp='terraform plan -var-file="${ENV}/terraform.tfvars" -lock=false'
 alias tva='terraform apply -var-file="${ENV}/terraform.tfvars"'
 alias tvc='terraform console -var-file="${ENV}/terraform.tfvars"'
 

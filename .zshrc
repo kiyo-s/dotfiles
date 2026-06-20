@@ -31,3 +31,10 @@ if [[ -d "${HOME}/.zsh" ]]; then
         source "$file"
     done
 fi
+
+# Added by Antigravity
+export PATH="/Users/kiyos/.antigravity/antigravity/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/kiyos/.local/bin:$PATH"

@@ -1,61 +1,42 @@
 {
-    "permissions": {
-        "allow": [
-            "Bash(ls:*)",
-            "Bash(git log:*)",
-            "Bash(git status:*)",
-            "Bash(helm list:*)",
-            "Bash(helm template:*)",
-            "Bash(kubectl get:*)",
-            "Bash(terraform init:*)",
-            "Bash(terraform fmt:*)",
-            "Bash(terraform graph:*)",
-            "Bash(terraform plan:*)",
-            "Bash(terraform show:*)",
-            "Bash(terraform validate:*)",
-            "Read(*)"
-        ],
-        "deny": [
-            "Bash(rm:*)",
-            "Bash(git reset:*)",
-            "Bash(helm install:*)",
-            "Bash(helm uninstall:*)",
-            "Bash(kubectl apply:*)",
-            "Bash(kubectl delete:*)",
-            "Bash(kubectl patch:*)",
-            "Bash(terraform destroy:*)"
-        ],
-        "defaultMode": "default",
-        "additionalDirectories": [
-            "~/tasks/"
-        ]
-    },
-    "hooks": {
-        "Notification": [
-            {
-                "hooks": [
-                    {
-                        "type": "command",
-                        "command": "say -v Samantha 'Please verify the prompt'"
-                    }
-                ]
-            }
-        ],
-        "Stop": [
-            {
-                "hooks": [
-                    {
-                        "type": "command",
-                        "command": "say -v Samantha 'Task completed successfully'"
-                    }
-                ]
-            }
-        ]
-    },
-    "language": "Japanese",
-    "autoUpdatesChannel": "latest",
-    "statusLine": {
-        "type": "command",
-        "command": "bash ~/.claude/statusline-command.sh"
-    }
+  "permissions": {
+    "allow": [
+      "Bash(ls *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git status *)",
+      "Bash(helm list *)",
+      "Bash(helm template *)",
+      "Bash(kubectl describe *)",
+      "Bash(kubectl get *)",
+      "Bash(terraform init *)",
+      "Bash(terraform fmt *)",
+      "Bash(terraform graph *)",
+      "Bash(terraform plan *)",
+      "Bash(terraform show *)",
+      "Bash(terraform validate *)",
+      "Read(*)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git reset *)",
+      "Bash(helm install *)",
+      "Bash(helm uninstall *)",
+      "Bash(kubectl apply *)",
+      "Bash(kubectl delete *)",
+      "Bash(kubectl patch *)",
+      "Bash(terraform destroy *)"
+    ],
+    "defaultMode": "default",
+    "additionalDirectories": ["~/tasks/"]
+  },
+  "hooks": {},
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "language": "Japanese",
+  "autoUpdatesChannel": "latest",
+  "verbose": true,
+  "preferredNotifChannel": "ghostty"
 }
